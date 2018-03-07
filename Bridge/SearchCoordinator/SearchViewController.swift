@@ -12,7 +12,8 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let ydl = youtubedl()
+        ydl.run_server(11)
         // Do any additional setup after loading the view.
     }
 
