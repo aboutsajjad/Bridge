@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+import MZDownloadManager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private var applicationCoordinator: ApplicationCoordinator?
-
+    var backgroundSessionCompletionHandler : (() -> Void)?
+    
+    
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
+        
         let applicationCoordinator = ApplicationCoordinator(window: window)
         
         self.window = window
@@ -47,6 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        backgroundSessionCompletionHandler = completionHandler
+    }
+    
+   
 }
 

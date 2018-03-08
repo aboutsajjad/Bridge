@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C451F58920502ADB00CE71A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F58820502ADB00CE71A7 /* AppDelegate.swift */; };
-		C451F58B20502ADB00CE71A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F58A20502ADB00CE71A7 /* ViewController.swift */; };
 		C451F59020502ADB00CE71A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C451F58F20502ADB00CE71A7 /* Assets.xcassets */; };
 		C451F59320502ADB00CE71A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C451F59120502ADB00CE71A7 /* LaunchScreen.storyboard */; };
 		C451F59C20502B2100CE71A7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F59B20502B2100CE71A7 /* Coordinator.swift */; };
@@ -16,8 +15,6 @@
 		C451F5A720502C0700CE71A7 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5A620502C0700CE71A7 /* SearchCoordinator.swift */; };
 		C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5A820502CB800CE71A7 /* SearchViewController.swift */; };
 		C451F5AB20502CB800CE71A7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C451F5A920502CB800CE71A7 /* SearchViewController.xib */; };
-		C451F5AF2050311B00CE71A7 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5AD2050311A00CE71A7 /* DownloadViewController.swift */; };
-		C451F5B02050311B00CE71A7 /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C451F5AE2050311B00CE71A7 /* DownloadViewController.xib */; };
 		C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */; };
 		C484F4E2205047B700033685 /* python36.zip in Resources */ = {isa = PBXBuildFile; fileRef = C484F410205047B700033685 /* python36.zip */; };
 		C484F4E3205047B800033685 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F47B205047B700033685 /* libPython.a */; };
@@ -934,12 +931,19 @@
 		C484FC13205052F700033685 /* swfinterp.py in Resources */ = {isa = PBXBuildFile; fileRef = C484F904205052F600033685 /* swfinterp.py */; };
 		C484FC14205052F700033685 /* YoutubeDL.py in Resources */ = {isa = PBXBuildFile; fileRef = C484F905205052F600033685 /* YoutubeDL.py */; };
 		C484FC15205052F700033685 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C484F906205052F600033685 /* __main__.py */; };
+		C484FC182051248300033685 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484FC162051248300033685 /* DownloadViewController.swift */; };
+		C484FC192051248300033685 /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C484FC172051248300033685 /* DownloadViewController.xib */; };
+		C484FC202051407800033685 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484FC1E2051407800033685 /* DownloadCell.swift */; };
+		C484FC212051407800033685 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C484FC1F2051407800033685 /* DownloadCell.xib */; };
+		CCAC2AEEFCFD721EA00E8BB2 /* Pods_Bridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14262A57A04CFBB7C64BB836 /* Pods_Bridge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14262A57A04CFBB7C64BB836 /* Pods_Bridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5236CBF5EB53BC11392355D1 /* Pods-Bridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bridge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bridge/Pods-Bridge.debug.xcconfig"; sourceTree = "<group>"; };
+		5976A5DA20B3A7439D035E86 /* Pods-Bridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bridge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bridge/Pods-Bridge.release.xcconfig"; sourceTree = "<group>"; };
 		C451F58520502ADB00CE71A7 /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C451F58820502ADB00CE71A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C451F58A20502ADB00CE71A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C451F58F20502ADB00CE71A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C451F59220502ADB00CE71A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C451F59420502ADB00CE71A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -948,8 +952,6 @@
 		C451F5A620502C0700CE71A7 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		C451F5A820502CB800CE71A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C451F5A920502CB800CE71A7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		C451F5AD2050311A00CE71A7 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
-		C451F5AE2050311B00CE71A7 /* DownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
 		C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCoordinator.swift; sourceTree = "<group>"; };
 		C484F408205047B700033685 /* pyconfig-x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-x86_64.h"; sourceTree = "<group>"; };
 		C484F409205047B700033685 /* pyconfig-armv7s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-armv7s.h"; sourceTree = "<group>"; };
@@ -2071,6 +2073,10 @@
 		C484F904205052F600033685 /* swfinterp.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = swfinterp.py; sourceTree = "<group>"; };
 		C484F905205052F600033685 /* YoutubeDL.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = YoutubeDL.py; sourceTree = "<group>"; };
 		C484F906205052F600033685 /* __main__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
+		C484FC162051248300033685 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		C484FC172051248300033685 /* DownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
+		C484FC1E2051407800033685 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		C484FC1F2051407800033685 /* DownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2088,12 +2094,22 @@
 				C484F4E4205047B800033685 /* libxz.a in Frameworks */,
 				C484F4E6205047B800033685 /* libbzip2.a in Frameworks */,
 				C484F4EF2050483A00033685 /* libxz.a in Frameworks */,
+				CCAC2AEEFCFD721EA00E8BB2 /* Pods_Bridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C5DD382606E9B90B633F683 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5236CBF5EB53BC11392355D1 /* Pods-Bridge.debug.xcconfig */,
+				5976A5DA20B3A7439D035E86 /* Pods-Bridge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C451F57C20502ADB00CE71A7 = {
 			isa = PBXGroup;
 			children = (
@@ -2104,6 +2120,7 @@
 				C451F58720502ADB00CE71A7 /* Bridge */,
 				C484F4E7205047E100033685 /* Frameworks */,
 				C451F58620502ADB00CE71A7 /* Products */,
+				8C5DD382606E9B90B633F683 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2118,16 +2135,13 @@
 		C451F58720502ADB00CE71A7 /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
-				C451F5AC205030F900CE71A7 /* DownloadCoordinator */,
 				C451F59A20502AF800CE71A7 /* AppCoordinator */,
 				C451F59F20502BA500CE71A7 /* SearchCoordinator */,
 				C451F5A020502BB700CE71A7 /* DownloadCoordinator */,
 				C451F5A120502BCB00CE71A7 /* BrowserCoordinator */,
-				C451F58A20502ADB00CE71A7 /* ViewController.swift */,
 				C451F58F20502ADB00CE71A7 /* Assets.xcassets */,
 				C451F59120502ADB00CE71A7 /* LaunchScreen.storyboard */,
 				C451F59420502ADB00CE71A7 /* Info.plist */,
-				C451F59B20502B2100CE71A7 /* Coordinator.swift */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -2135,6 +2149,7 @@
 		C451F59A20502AF800CE71A7 /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				C451F59B20502B2100CE71A7 /* Coordinator.swift */,
 				C451F58820502ADB00CE71A7 /* AppDelegate.swift */,
 				C451F59D20502B3B00CE71A7 /* AppCoordinator.swift */,
 			);
@@ -2155,8 +2170,10 @@
 			isa = PBXGroup;
 			children = (
 				C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */,
-				C451F5AD2050311A00CE71A7 /* DownloadViewController.swift */,
-				C451F5AE2050311B00CE71A7 /* DownloadViewController.xib */,
+				C484FC162051248300033685 /* DownloadViewController.swift */,
+				C484FC172051248300033685 /* DownloadViewController.xib */,
+				C484FC1E2051407800033685 /* DownloadCell.swift */,
+				C484FC1F2051407800033685 /* DownloadCell.xib */,
 			);
 			path = DownloadCoordinator;
 			sourceTree = "<group>";
@@ -2166,14 +2183,6 @@
 			children = (
 			);
 			path = BrowserCoordinator;
-			sourceTree = "<group>";
-		};
-		C451F5AC205030F900CE71A7 /* DownloadCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = DownloadCoordinator;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		C484F403205047B700033685 /* Support */ = {
@@ -2512,6 +2521,7 @@
 				C484F4EC2050483000033685 /* libPython.a */,
 				C484F4EA2050482300033685 /* libOpenSSL.a */,
 				C484F4E82050481100033685 /* libbzip2.a */,
+				14262A57A04CFBB7C64BB836 /* Pods_Bridge.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -3554,10 +3564,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C451F59720502ADB00CE71A7 /* Build configuration list for PBXNativeTarget "Bridge" */;
 			buildPhases = (
+				20A8BEFFF97D02A4A0BF5269 /* [CP] Check Pods Manifest.lock */,
 				C451F58120502ADB00CE71A7 /* Sources */,
 				C451F58220502ADB00CE71A7 /* Frameworks */,
 				C451F58320502ADB00CE71A7 /* Resources */,
 				C484F402205046FE00033685 /* ShellScript */,
+				875DF0D7E1DB5AC53F454807 /* [CP] Embed Pods Frameworks */,
+				09D6E922489A7FE62636A427 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3582,6 +3595,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -4029,7 +4047,6 @@
 				C484F9E5205052F700033685 /* kaltura.py in Resources */,
 				C484FA99205052F700033685 /* tagesschau.py in Resources */,
 				C484F9B2205052F600033685 /* orf.py in Resources */,
-				C451F5B02050311B00CE71A7 /* DownloadViewController.xib in Resources */,
 				C484FA30205052F700033685 /* tvland.py in Resources */,
 				C484FA8D205052F700033685 /* redtube.py in Resources */,
 				C484FB04205052F700033685 /* radiode.py in Resources */,
@@ -4098,6 +4115,7 @@
 				C484FAEA205052F700033685 /* nuevo.py in Resources */,
 				C484F97F205052F600033685 /* njpwworld.py in Resources */,
 				C484FBB0205052F700033685 /* rutube.py in Resources */,
+				C484FC212051407800033685 /* DownloadCell.xib in Resources */,
 				C484F90C205052F600033685 /* ffmpeg.py in Resources */,
 				C484F53F2050517500033685 /* __init__.py in Resources */,
 				C484F91F205052F600033685 /* external.py in Resources */,
@@ -4349,6 +4367,7 @@
 				C484FB1B205052F700033685 /* streetvoice.py in Resources */,
 				C484F56B2050519100033685 /* loaders.py in Resources */,
 				C484FB08205052F700033685 /* reuters.py in Resources */,
+				C484FC192051248300033685 /* DownloadViewController.xib in Resources */,
 				C484FB96205052F700033685 /* testurl.py in Resources */,
 				C484F5142050513400033685 /* logging.py in Resources */,
 				C484F952205052F600033685 /* rudo.py in Resources */,
@@ -4521,6 +4540,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09D6E922489A7FE62636A427 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20A8BEFFF97D02A4A0BF5269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		875DF0D7E1DB5AC53F454807 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MZDownloadManager/MZDownloadManager.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZDownloadManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C484F402205046FE00033685 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4544,10 +4620,10 @@
 				C484F589205051B700033685 /* _speedups.c in Sources */,
 				C484F4F620504A8C00033685 /* youtubedl.m in Sources */,
 				C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */,
+				C484FC202051407800033685 /* DownloadCell.swift in Sources */,
 				C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */,
+				C484FC182051248300033685 /* DownloadViewController.swift in Sources */,
 				C451F59E20502B3B00CE71A7 /* AppCoordinator.swift in Sources */,
-				C451F58B20502ADB00CE71A7 /* ViewController.swift in Sources */,
-				C451F5AF2050311B00CE71A7 /* DownloadViewController.swift in Sources */,
 				C451F58920502ADB00CE71A7 /* AppDelegate.swift in Sources */,
 				C451F5A720502C0700CE71A7 /* SearchCoordinator.swift in Sources */,
 				C451F59C20502B2100CE71A7 /* Coordinator.swift in Sources */,
@@ -4677,6 +4753,7 @@
 		};
 		C451F59820502ADB00CE71A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5236CBF5EB53BC11392355D1 /* Pods-Bridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -4704,6 +4781,7 @@
 		};
 		C451F59920502ADB00CE71A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5976A5DA20B3A7439D035E86 /* Pods-Bridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

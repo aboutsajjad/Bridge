@@ -12,7 +12,7 @@ class ApplicationCoordinator: Coordinator {
     
     let window: UIWindow
     let rootViewController: UITabBarController
-    
+    let downloadCoordinator: DownloadCoordinator
     
     init(window: UIWindow) {
         self.window = window
@@ -21,13 +21,14 @@ class ApplicationCoordinator: Coordinator {
         
         
         let searchCoordinator = SearchCoordinator()
-        let downloadCoordinator = DownloadCoordinator()
+        downloadCoordinator = DownloadCoordinator()
         
         
         var controllers: [UIViewController] = []
         
         let searchViewController = searchCoordinator.rootViewController
         searchViewController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
+        searchCoordinator.searchViewController.downloadManager = downloadCoordinator.downloadDelegate.downloadManager
        
         let downloadViewController = downloadCoordinator.rootViewController
         downloadViewController.tabBarItem = UITabBarItem(title: "Download", image: nil, selectedImage: nil)

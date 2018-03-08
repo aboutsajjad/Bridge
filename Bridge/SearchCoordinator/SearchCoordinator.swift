@@ -11,16 +11,20 @@ import UIKit
 
 class SearchCoordinator: Coordinator {
     //private let presenter: UITabBarController
-    private var searchViewController: SearchViewController?
+    private var navViewcontroler: UINavigationController
+    var searchViewController: SearchViewController
     
     public var rootViewController: UIViewController {
-        return searchViewController!
+        return navViewcontroler
     }
     
+    
     init() {
-        let searchViewController = SearchViewController(nibName: nil, bundle: nil) // 6
+        navViewcontroler = UINavigationController()
+        searchViewController = SearchViewController(nibName: nil, bundle: nil)
         searchViewController.title = "Search"
-        self.searchViewController = searchViewController
+        navViewcontroler.pushViewController(searchViewController, animated: true)
+        
     }
     
     func start() {

@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import MZDownloadManager
 
 class SearchViewController: UIViewController {
-
+    
+    var downloadManager: MZDownloadManager? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ydl = youtubedl()
-        ydl.run_server(11)
+        //let ydl = youtubedl()
+        //ydl.run_server(11)
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -22,7 +27,13 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        downloadManager?.addDownloadTask("sdfvgbhnjm", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Telegram.v1.2.6_p30download.com.rar")
+        //downloadManager?.addDownloadTask("asdascc", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Mozilla.Firefox.v58.0.2.x64_p30download.com.zip")
+        
+        
+    }
     /*
     // MARK: - Navigation
 

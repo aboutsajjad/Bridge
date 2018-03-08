@@ -11,17 +11,22 @@ import UIKit
 
 
 class DownloadCoordinator: Coordinator {
-    //private let presenter: UITabBarController
-    private var downloadViewController: DownloadViewController?
+    private var navViewcontroler: UINavigationController
+    private var downloadViewController: DownloadViewController
     
     public var rootViewController: UIViewController {
-        return downloadViewController!
+        return navViewcontroler
+    }
+    public var downloadDelegate: DownloadViewController {
+        return downloadViewController
     }
     
     init() {
-        let downloadViewController = DownloadViewController(nibName: nil, bundle: nil) // 6
+        navViewcontroler = UINavigationController()
+        downloadViewController = DownloadViewController(nibName: nil, bundle: nil) // 6
         downloadViewController.title = "Download"
-        self.downloadViewController = downloadViewController
+        navViewcontroler.pushViewController(downloadViewController, animated: true)
+        
     }
     
     func start() {
