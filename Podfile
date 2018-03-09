@@ -13,6 +13,8 @@ target 'Bridge' do
   pod 'SwiftyJSON' 
   pod 'NVActivityIndicatorView'
   pod 'FileBrowser', '~> 1.0'
+  pod "RMessage"
+  pod 'UIView+Shake'
  target 'BridgeTests' do
          inherit! :search_paths
     end

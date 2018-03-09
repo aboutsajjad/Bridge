@@ -10,30 +10,38 @@ import UIKit
 import MZDownloadManager
 import NVActivityIndicatorView
 import SnapKit
+import UIView_Shake
+
 
 class SearchViewController: UIViewController {
     
     var downloadManager: MZDownloadManager? = nil
     
+    @IBOutlet weak var searchbtn: UIButton!
     @IBOutlet weak var linkfield: UITextField!
     @IBAction func search(_ sender: Any) {
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(type: .ballScaleRippleMultiple))
+        
         if let url = linkfield.text {
             if url != "" {
+                NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(type: .ballRotateChase))
                 API.shared.extract(url, completion: { (entries) in
                     self.entriesActions(entries)
                     DispatchQueue.main.async {
                         NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
                     }
                 })
+            }else {
+                linkfield.shake()
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         waitforServer()
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
         
     }
 
@@ -46,6 +54,10 @@ class SearchViewController: UIViewController {
             make.rightMargin.equalToSuperview().offset(-10)
             //make.centerX.equalToSuperview().offset(-10)
             make.centerY.equalToSuperview().offset(-30)
+        }
+        searchbtn.snp.remakeConstraints { (make) in
+            make.topMargin.equalTo(linkfield.snp.bottomMargin).offset(30)
+            make.leftMargin.rightMargin.equalToSuperview()
         }
         
     }

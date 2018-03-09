@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import NVActivityIndicatorView
+import RMessage
 
 class API {
     static let shared = API()
@@ -22,14 +24,16 @@ class API {
     
     func extract(_ url: String, completion: @escaping (_ entity: Entires) -> ()) {
         let parameters: Parameters = ["url": url, "flatten": "False"]
-        Alamofire.request(BASEURL + "/api/info", parameters: parameters).responseJSON { response in
+        Alamofire.request(BASEURL + "/api/info", parameters: parameters).validate(statusCode: 200..<300).responseJSON
+            { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 //print(json)
                 completion(Entires(json))
             case .failure(let error):
-                print(error)
+                NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+                RMessage.showNotification(withTitle: error.localizedDescription, type: .error, customTypeName: nil, callback: nil)
             }
         }
     }
