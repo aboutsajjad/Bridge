@@ -22,12 +22,12 @@ struct Format {
 }
 
 struct Entity {
-    
+    var title: String
     var formats: [Format] = []
     
-    init(_ fms: [JSON]) {
-        
-        for fm in fms {
+    init(_ fms: JSON) {
+        title = fms["title"].stringValue
+        for fm in fms["formats"].arrayValue {
             formats.append(Format(fm))
         }
     }
@@ -35,17 +35,17 @@ struct Entity {
 }
 
 struct Entires {
-    var title: String
+    
     var entries: [Entity] = []
     
     init(_ json: JSON) {
-        title = json["info"]["title"].stringValue
+        
         if let entys = json["info"]["entries"].array {
             for entry in entys {
-                entries.append(Entity(entry["formats"].arrayValue))
+                entries.append(Entity(entry["formats"]))
             }
         } else {
-            entries.append(Entity(json["info"]["formats"].arrayValue))
+            entries.append(Entity(json["info"]))
         }
         
     }
