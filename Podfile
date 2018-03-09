@@ -9,5 +9,5 @@ target 'Bridge' do
   pod 'Alamofire', '~> 4.7'
   pod "MZDownloadManager"
   pod 'SnapKit', '~> 4.0.0'
-  pod 'MBProgressHUD', '~> 1.1.0'
+  pod "MBCircularProgressBar"
 end

@@ -935,6 +935,7 @@
 		C484FC192051248300033685 /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C484FC172051248300033685 /* DownloadViewController.xib */; };
 		C484FC202051407800033685 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484FC1E2051407800033685 /* DownloadCell.swift */; };
 		C484FC212051407800033685 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C484FC1F2051407800033685 /* DownloadCell.xib */; };
+		C4F3348620524D17004903B8 /* roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3348520524D17004903B8 /* roundTo.swift */; };
 		CCAC2AEEFCFD721EA00E8BB2 /* Pods_Bridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14262A57A04CFBB7C64BB836 /* Pods_Bridge.framework */; };
 /* End PBXBuildFile section */
 
@@ -2077,6 +2078,7 @@
 		C484FC172051248300033685 /* DownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
 		C484FC1E2051407800033685 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
 		C484FC1F2051407800033685 /* DownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
+		C4F3348520524D17004903B8 /* roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundTo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2152,6 +2154,7 @@
 				C451F59B20502B2100CE71A7 /* Coordinator.swift */,
 				C451F58820502ADB00CE71A7 /* AppDelegate.swift */,
 				C451F59D20502B3B00CE71A7 /* AppCoordinator.swift */,
+				C4F3348520524D17004903B8 /* roundTo.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -4581,14 +4584,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MZDownloadManager/MZDownloadManager.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZDownloadManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -4621,6 +4624,7 @@
 				C484F4F620504A8C00033685 /* youtubedl.m in Sources */,
 				C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */,
 				C484FC202051407800033685 /* DownloadCell.swift in Sources */,
+				C4F3348620524D17004903B8 /* roundTo.swift in Sources */,
 				C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */,
 				C484FC182051248300033685 /* DownloadViewController.swift in Sources */,
 				C451F59E20502B3B00CE71A7 /* AppCoordinator.swift in Sources */,

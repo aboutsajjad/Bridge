@@ -9,34 +9,31 @@
 import UIKit
 import MZDownloadManager
 import SnapKit
-import MBProgressHUD
+import MBCircularProgressBar
+
 
 class DownloadCell: UITableViewCell {
 
     @IBOutlet weak var stackview: UIStackView!
-    @IBOutlet weak var progressview: UIView!
+    @IBOutlet weak var progressview: MBCircularProgressBarView!
     @IBOutlet weak var titlelabel: UILabel!
     @IBOutlet weak var remaining: UILabel!
     @IBOutlet weak var speed: UILabel!
-    var hud: MBProgressHUD?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        hud = MBProgressHUD.showAdded(to: contentView, animated: true)
-        hud?.mode = .annularDeterminate
-        hud?.bezelView.color = .white
-        hud?.bezelView.style = .solidColor
         
-        //hud?.label.text = "Downloadnign"
-        hud?.snp.makeConstraints { (make) in
-            //make.width.equalTo(10)
-            make.left.top.bottom.equalToSuperview()
+        progressview?.snp.makeConstraints { (make) in
+            make.height.width.equalTo(67)
+            make.leftMargin.topMargin.bottomMargin.equalToSuperview().offset(2)
         }
         stackview.snp.makeConstraints { (make) in
-            make.leftMargin.equalTo(hud!.snp.right)
-            make.topMargin.bottom.rightMargin.equalToSuperview()
+            make.leftMargin.equalTo(progressview.snp.right).offset(3)
+            make.topMargin.bottomMargin.rightMargin.equalToSuperview().offset(2)
             
         }
+        
         
     }
 
@@ -48,8 +45,10 @@ class DownloadCell: UITableViewCell {
     func updateCellForRowAtIndexPath(_ indexPath : IndexPath, downloadModel: MZDownloadModel) {
         
         titlelabel.text = downloadModel.fileName
-        remaining.text = "\(downloadModel.progress)% - \(downloadModel.downloadedFile?.size) \(downloadModel.downloadedFile?.unit) of \(downloadModel.file?.size) \(downloadModel.file?.unit)"
-        speed.text = "\(downloadModel.speed?.speed) \(downloadModel.speed?.unit) - \(downloadModel.remainingTime?.hours)"
-        hud?.progress = downloadModel.progress
+        remaining.text = "\(downloadModel.progress.roundTo())% - \(downloadModel.downloadedFile?.size.roundTo() ?? "0") \(downloadModel.downloadedFile?.unit ?? "KB") of \(downloadModel.file?.size.roundTo() ?? "0") \(downloadModel.file?.unit ?? "KB")"
+        speed.text = "\(downloadModel.speed?.speed.roundTo() ?? "0") \(downloadModel.speed?.unit ?? "KB")/s - \(downloadModel.remainingTime?.hours ?? 0) houre(s) and \(downloadModel.remainingTime?.minutes ?? 0) remaining"
+        progressview.value = CGFloat(downloadModel.progress)
     }
+    
+    
 }
