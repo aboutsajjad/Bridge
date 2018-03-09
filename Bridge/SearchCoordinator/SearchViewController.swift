@@ -15,9 +15,15 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let ydl = youtubedl()
-        //ydl.run_server(11)
-        
+        let ydl = youtubedl()
+        ydl.run_server(11)
+        sleep(5)
+        API.shared.extract("https://www.youtube.com/watch?v=6rmTfmdUIVY") { (ennns) in
+            print(ennns.entries.count)
+            for i in ennns.entries {
+                print(i.formats.count)
+            }
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -29,7 +35,7 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        downloadManager?.addDownloadTask("sdfvgbhnjm", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Telegram.v1.2.6_p30download.com.rar")
+        //downloadManager?.addDownloadTask("sdfvgbhnjm", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Telegram.v1.2.6_p30download.com.rar")
         //downloadManager?.addDownloadTask("asdascc", fileURL: "http://cdn.p30download.com/?b=p30dl-software&f=Mozilla.Firefox.v58.0.2.x64_p30download.com.zip")
         
         

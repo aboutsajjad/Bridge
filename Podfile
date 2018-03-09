@@ -10,4 +10,8 @@ target 'Bridge' do
   pod "MZDownloadManager"
   pod 'SnapKit', '~> 4.0.0'
   pod "MBCircularProgressBar"
+  pod 'SwiftyJSON' 
+ target 'BridgeTests' do
+         inherit! :search_paths
+    end
 end

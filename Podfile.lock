@@ -3,19 +3,22 @@ PODS:
   - MBCircularProgressBar (0.3.5)
   - MZDownloadManager (3.3)
   - SnapKit (4.0.0)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - MBCircularProgressBar
   - MZDownloadManager
   - SnapKit (~> 4.0.0)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   MZDownloadManager: b6ee998b15a05b25f011d9c715ec6b184729a258
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: e2afa5466e803d2e233c7fe7d0db22f0641f57d4
+PODFILE CHECKSUM: 96f8a5911582065eea59c1e1004ae7dbe02d8d54
 
 COCOAPODS: 1.4.0
