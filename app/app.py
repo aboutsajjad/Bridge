@@ -8,7 +8,7 @@ from flask import Flask, Blueprint, current_app, jsonify, request, redirect, abo
 import youtube_dl
 from youtube_dl.version import __version__ as youtube_dl_version
 
-print('hellow')
+__version__ = 1.0
 
 
 if not hasattr(sys.stderr, 'isatty'):

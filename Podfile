@@ -11,6 +11,7 @@ target 'Bridge' do
   pod 'SnapKit', '~> 4.0.0'
   pod "MBCircularProgressBar"
   pod 'SwiftyJSON' 
+  pod 'NVActivityIndicatorView'
  target 'BridgeTests' do
          inherit! :search_paths
     end

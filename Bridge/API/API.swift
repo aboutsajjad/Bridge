@@ -15,7 +15,10 @@ class API {
     
     private var BASEURL: String = "http://127.0.0.1:9191"
     
-    
+    func run_flask() {
+        let ydl = youtubedl()
+        ydl.run_server(11)
+    }
     
     func extract(_ url: String, completion: @escaping (_ entity: Entires) -> ()) {
         let parameters: Parameters = ["url": url, "flatten": "False"]

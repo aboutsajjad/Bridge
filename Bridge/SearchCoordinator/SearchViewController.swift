@@ -8,6 +8,7 @@
 
 import UIKit
 import MZDownloadManager
+import NVActivityIndicatorView
 
 class SearchViewController: UIViewController {
     
@@ -15,12 +16,11 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ydl = youtubedl()
-        ydl.run_server(11)
-        sleep(5)
-        API.shared.extract("https://www.youtube.com/watch?v=6rmTfmdUIVY") { (ennns) in
-            self.entriesActions(ennns)
-        }
+        
+        waitforServer()
+        //API.shared.extract("https://www.youtube.com/watch?v=6rmTfmdUIVY") { (ennns) in
+          //  self.entriesActions(ennns)
+        //}
         
         // Do any additional setup after loading the view.
     }
@@ -70,4 +70,22 @@ class SearchViewController: UIViewController {
         
     }
 
+    func waitforServer() {
+        let myqueue = DispatchQueue(label: "waitforsercer")
+        myqueue.async {
+            while true {
+                let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
+                if task.1 != nil {
+                    DispatchQueue.main.async {
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+                    }
+                    break
+                }
+                sleep(UInt32(0.5))
+            }
+        }
+    }
 }
+
+
+
