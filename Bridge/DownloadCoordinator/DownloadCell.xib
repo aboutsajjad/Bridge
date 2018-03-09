@@ -49,7 +49,7 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="showValueString" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                <real key="value" value="4"/>
+                                <real key="value" value="30"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
                                 <real key="value" value="100"/>

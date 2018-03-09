@@ -22,6 +22,7 @@ class ApplicationCoordinator: Coordinator {
         
         let searchCoordinator = SearchCoordinator()
         downloadCoordinator = DownloadCoordinator()
+        let browserCoordinator = BrowserCoordinator()
         
         
         var controllers: [UIViewController] = []
@@ -33,10 +34,12 @@ class ApplicationCoordinator: Coordinator {
         let downloadViewController = downloadCoordinator.rootViewController
         downloadViewController.tabBarItem = UITabBarItem(title: "Download", image: nil, selectedImage: nil)
         
-       
+        let browserViewController = browserCoordinator.rootViewController
+        browserViewController.tabBarItem = UITabBarItem(title: "Documents", image: nil, selectedImage: nil)
         
         controllers.append(searchViewController)
         controllers.append(downloadViewController)
+        controllers.append(browserViewController)
         
         rootViewController.viewControllers = controllers
         rootViewController.tabBar.isTranslucent = false

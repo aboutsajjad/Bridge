@@ -9,29 +9,44 @@
 import UIKit
 import MZDownloadManager
 import NVActivityIndicatorView
+import SnapKit
 
 class SearchViewController: UIViewController {
     
     var downloadManager: MZDownloadManager? = nil
     
+    @IBOutlet weak var linkfield: UITextField!
+    @IBAction func search(_ sender: Any) {
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(type: .ballScaleRippleMultiple))
+        if let url = linkfield.text {
+            if url != "" {
+                API.shared.extract(url, completion: { (entries) in
+                    self.entriesActions(entries)
+                    DispatchQueue.main.async {
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+                    }
+                })
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         waitforServer()
-        //API.shared.extract("https://www.youtube.com/watch?v=6rmTfmdUIVY") { (ennns) in
-          //  self.entriesActions(ennns)
-        //}
         
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        linkfield.snp.remakeConstraints { (make) in
+            make.height.equalTo(40)
+            make.leftMargin.equalToSuperview().offset(10)
+            make.rightMargin.equalToSuperview().offset(-10)
+            //make.centerX.equalToSuperview().offset(-10)
+            make.centerY.equalToSuperview().offset(-30)
+        }
         
     }
     
@@ -86,6 +101,4 @@ class SearchViewController: UIViewController {
         }
     }
 }
-
-
 

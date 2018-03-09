@@ -12,6 +12,7 @@ target 'Bridge' do
   pod "MBCircularProgressBar"
   pod 'SwiftyJSON' 
   pod 'NVActivityIndicatorView'
+  pod 'FileBrowser', '~> 1.0'
  target 'BridgeTests' do
          inherit! :search_paths
     end

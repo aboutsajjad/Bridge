@@ -47,7 +47,7 @@ class DownloadCell: UITableViewCell {
         titlelabel.text = downloadModel.fileName
         remaining.text = "\(downloadModel.progress.roundTo())% - \(downloadModel.downloadedFile?.size.roundTo() ?? "0") \(downloadModel.downloadedFile?.unit ?? "KB") of \(downloadModel.file?.size.roundTo() ?? "0") \(downloadModel.file?.unit ?? "KB")"
         speed.text = "\(downloadModel.speed?.speed.roundTo() ?? "0") \(downloadModel.speed?.unit ?? "KB")/s - \(downloadModel.remainingTime?.hours ?? 0) houre(s) and \(downloadModel.remainingTime?.minutes ?? 0) remaining"
-        progressview.value = CGFloat(downloadModel.progress)
+        progressview.value = CGFloat(downloadModel.progress) * 100
     }
     
     
