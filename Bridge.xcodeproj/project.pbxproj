@@ -22,7 +22,6 @@
 		C451F5AB20502CB800CE71A7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C451F5A920502CB800CE71A7 /* SearchViewController.xib */; };
 		C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */; };
 		C484F4E2205047B700033685 /* python36.zip in Resources */ = {isa = PBXBuildFile; fileRef = C484F410205047B700033685 /* python36.zip */; };
-		C484F4E3205047B800033685 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F47B205047B700033685 /* libPython.a */; };
 		C484F4E4205047B800033685 /* libxz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F47D205047B700033685 /* libxz.a */; };
 		C484F4E5205047B800033685 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F490205047B700033685 /* libOpenSSL.a */; };
 		C484F4E6205047B800033685 /* libbzip2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F4DF205047B700033685 /* libbzip2.a */; };
@@ -1091,7 +1090,6 @@
 		C484F478205047B700033685 /* pyconfig-i386.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-i386.h"; sourceTree = "<group>"; };
 		C484F479205047B700033685 /* bytes_methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bytes_methods.h; sourceTree = "<group>"; };
 		C484F47A205047B700033685 /* dynamic_annotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dynamic_annotations.h; sourceTree = "<group>"; };
-		C484F47B205047B700033685 /* libPython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPython.a; sourceTree = "<group>"; };
 		C484F47D205047B700033685 /* libxz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libxz.a; sourceTree = "<group>"; };
 		C484F47F205047B700033685 /* lzma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzma.h; sourceTree = "<group>"; };
 		C484F481205047B700033685 /* index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = index.h; sourceTree = "<group>"; };
@@ -2122,7 +2120,6 @@
 				C484F4ED2050483000033685 /* libPython.a in Frameworks */,
 				C484F4E5205047B800033685 /* libOpenSSL.a in Frameworks */,
 				C484F4E92050481100033685 /* libbzip2.a in Frameworks */,
-				C484F4E3205047B800033685 /* libPython.a in Frameworks */,
 				C484F4E4205047B800033685 /* libxz.a in Frameworks */,
 				C484F4E6205047B800033685 /* libbzip2.a in Frameworks */,
 				C484F4EF2050483A00033685 /* libxz.a in Frameworks */,
@@ -2250,7 +2247,6 @@
 			children = (
 				C484F405205047B700033685 /* Resources */,
 				C484F411205047B700033685 /* Headers */,
-				C484F47B205047B700033685 /* libPython.a */,
 			);
 			path = Python;
 			sourceTree = "<group>";
