@@ -21,6 +21,7 @@
 		C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5A820502CB800CE71A7 /* SearchViewController.swift */; };
 		C451F5AB20502CB800CE71A7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C451F5A920502CB800CE71A7 /* SearchViewController.xib */; };
 		C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */; };
+		C45E5D1A20935CF8000DAE7B /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E5D1920935CF8000DAE7B /* Reach.swift */; };
 		C484F4E2205047B700033685 /* python36.zip in Resources */ = {isa = PBXBuildFile; fileRef = C484F410205047B700033685 /* python36.zip */; };
 		C484F4E4205047B800033685 /* libxz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F47D205047B700033685 /* libxz.a */; };
 		C484F4E5205047B800033685 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F490205047B700033685 /* libOpenSSL.a */; };
@@ -977,6 +978,7 @@
 		C451F5A820502CB800CE71A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C451F5A920502CB800CE71A7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCoordinator.swift; sourceTree = "<group>"; };
+		C45E5D1920935CF8000DAE7B /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		C484F408205047B700033685 /* pyconfig-x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-x86_64.h"; sourceTree = "<group>"; };
 		C484F409205047B700033685 /* pyconfig-armv7s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-armv7s.h"; sourceTree = "<group>"; };
 		C484F40A205047B700033685 /* pyconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyconfig.h; sourceTree = "<group>"; };
@@ -3618,6 +3620,7 @@
 				C4F33498205252EF004903B8 /* API.swift */,
 				C4F3349B20527CDA004903B8 /* Entity.swift */,
 				C425DA722052975A00B6A707 /* URLSession.swift */,
+				C45E5D1920935CF8000DAE7B /* Reach.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -3674,7 +3677,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Sajjad Aboutalebi";
 				TargetAttributes = {
 					C451F58420502ADB00CE71A7 = {
@@ -4718,6 +4721,7 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/PPTopMostController/PPTopMostController.framework",
 				"${BUILT_PRODUCTS_DIR}/RMessage/RMessage.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIView+Shake/UIView_Shake.framework",
@@ -4732,6 +4736,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPTopMostController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMessage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIView_Shake.framework",
@@ -4786,6 +4791,7 @@
 				C4F3348620524D17004903B8 /* roundTo.swift in Sources */,
 				C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */,
 				C484FC182051248300033685 /* DownloadViewController.swift in Sources */,
+				C45E5D1A20935CF8000DAE7B /* Reach.swift in Sources */,
 				C451F59E20502B3B00CE71A7 /* AppCoordinator.swift in Sources */,
 				C425DA732052975A00B6A707 /* URLSession.swift in Sources */,
 				C425DA7E2052CD1600B6A707 /* BrowserViewController.swift in Sources */,
@@ -4842,6 +4848,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -4849,6 +4856,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -4899,6 +4907,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -4906,6 +4915,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

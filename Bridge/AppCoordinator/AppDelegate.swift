@@ -8,6 +8,8 @@
 
 import UIKit
 import NVActivityIndicatorView
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.applicationCoordinator = applicationCoordinator
         
         applicationCoordinator.start()
+        
         return true
     }
     

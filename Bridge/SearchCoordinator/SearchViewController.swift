@@ -11,16 +11,15 @@ import MZDownloadManager
 import NVActivityIndicatorView
 import SnapKit
 import UIView_Shake
+import Alamofire
 
 
 class SearchViewController: UIViewController {
-    
     var downloadManager: MZDownloadManager? = nil
-    
     @IBOutlet weak var searchbtn: UIButton!
     @IBOutlet weak var linkfield: UITextField!
+    
     @IBAction func search(_ sender: Any) {
-        
         if let url = linkfield.text {
             if url != "" {
                 NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(type: .ballRotateChase))
@@ -42,9 +41,8 @@ class SearchViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
-        
     }
-
+    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
