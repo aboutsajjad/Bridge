@@ -8,7 +8,6 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
   - PPTopMostController (0.0.1)
-  - ReachabilitySwift (4.1.0)
   - RMessage (2.2.1):
     - HexColors (~> 4.0)
     - PPTopMostController
@@ -22,7 +21,6 @@ DEPENDENCIES:
   - MBCircularProgressBar
   - MZDownloadManager
   - NVActivityIndicatorView
-  - ReachabilitySwift
   - RMessage
   - SnapKit (~> 4.0.0)
   - SwiftyJSON
@@ -36,12 +34,11 @@ SPEC CHECKSUMS:
   MZDownloadManager: b6ee998b15a05b25f011d9c715ec6b184729a258
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   PPTopMostController: 4e6f1e5f8c645bdcc74cd837a20f607ff262c048
-  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   RMessage: 37b1ab9d92ec1ffbafbbbdfc6f10c9524829c4e6
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   UIView+Shake: 055ad67721de1f74d29c0a1d464697e505dfc62f
 
-PODFILE CHECKSUM: a436c978414a36f569f130465eac28c2fec2ec05
+PODFILE CHECKSUM: 34255ef2bf0637f6c423cb7ee99737a9a77591fc
 
 COCOAPODS: 1.4.0

@@ -12,7 +12,7 @@ import NVActivityIndicatorView
 import SnapKit
 import UIView_Shake
 import Alamofire
-
+import RMessage
 
 class SearchViewController: UIViewController {
     var downloadManager: MZDownloadManager? = nil
@@ -37,7 +37,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        waitforServer()
+        NetworkManager.shared.waitforServer()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
@@ -77,6 +77,8 @@ class SearchViewController: UIViewController {
         for fm in entry.formats {
             let action = UIAlertAction(title: fm.format, style: .default, handler: { (action) in
                 self.downloadManager?.addDownloadTask("\(entry.title).\(fm.ext)", fileURL: fm.url)
+                RMessage.showNotification(withTitle: "Download Started.", type: .success, customTypeName: nil, callback: nil)
+                
             })
             allertController.addAction(action)
         }
@@ -95,20 +97,6 @@ class SearchViewController: UIViewController {
         
     }
 
-    func waitforServer() {
-        let myqueue = DispatchQueue(label: "waitforsercer")
-        myqueue.async {
-            while true {
-                let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
-                if task.1 != nil {
-                    DispatchQueue.main.async {
-                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-                    }
-                    break
-                }
-                sleep(UInt32(0.5))
-            }
-        }
-    }
+    
 }
 

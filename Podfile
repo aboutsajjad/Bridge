@@ -15,7 +15,6 @@ target 'Bridge' do
   pod 'FileBrowser', '~> 1.0'
   pod "RMessage"
   pod 'UIView+Shake'
-  pod 'ReachabilitySwift'
  target 'BridgeTests' do
          inherit! :search_paths
     end

@@ -7,36 +7,35 @@
 //
 
 import Foundation
-import Alamofire
+import NVActivityIndicatorView
 
 class NetworkManager {
     
     //shared instance
     static let shared = NetworkManager()
     
-    let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "http://127.0.0.1:9191/api/version")
-    
-    func startNetworkReachabilityObserver() {
-        
-        reachabilityManager?.listener = { status in
-            switch status {
-                
-            case .notReachable:
-                print("The network is not reachable")
-                
-            case .unknown :
-                print("It is unknown whether the network is reachable")
-                
-            case .reachable(.ethernetOrWiFi):
-                print("The network is reachable over the WiFi connection")
-                
-            case .reachable(.wwan):
-                print("The network is reachable over the WWAN connection")
-                
+    func waitforServer() {
+        let myqueue = DispatchQueue(label: "waitforsercer")
+        myqueue.async {
+            while true {
+                let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
+                if task.1 != nil {
+                    DispatchQueue.main.async {
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+                    }
+                    break
+                }
+                sleep(UInt32(0.5))
             }
         }
-        
-        // start listening
-        reachabilityManager?.startListening()
+    }
+    
+    func isServerUp() -> Bool {
+        let task = URLSession.shared.synchronousDataTask(with: URL(string: "http://127.0.0.1:9191/api/version")!)
+        if task.1 != nil {
+            return true
+        } else {
+            return false
+        }
     }
 }

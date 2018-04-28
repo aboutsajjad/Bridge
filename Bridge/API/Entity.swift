@@ -42,7 +42,7 @@ struct Entires {
         
         if let entys = json["info"]["entries"].array {
             for entry in entys {
-                entries.append(Entity(entry["formats"]))
+                entries.append(Entity(entry))
             }
         } else {
             entries.append(Entity(json["info"]))
