@@ -26,8 +26,7 @@ class DownloadViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nib = UINib(nibName: "DownloadCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "downloadingCell")
+        tableView.register(DownloadTableViewCell.self, forCellReuseIdentifier: "downloadingCell")
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: nil, style: .done, target: nil, action: #selector(pauseAll))
@@ -41,7 +40,7 @@ class DownloadViewController: UITableViewController {
         let indexPath = IndexPath.init(row: index, section: 0)
         let cell = self.tableView.cellForRow(at: indexPath)
         if let cell = cell {
-            let downloadCell = cell as! DownloadCell
+            let downloadCell = cell as! DownloadTableViewCell
             downloadCell.updateCellForRowAtIndexPath(indexPath, downloadModel: downloadModel)
         }
     }
@@ -57,11 +56,11 @@ extension DownloadViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "downloadingCell", for: indexPath) as! DownloadCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "downloadingCell", for: indexPath) as! DownloadTableViewCell
         
         let downloadModel = downloadManager.downloadingArray[indexPath.row]
         cell.updateCellForRowAtIndexPath(indexPath, downloadModel: downloadModel)
-        
+        cell.layoutIfNeeded()
         return cell
         
     }

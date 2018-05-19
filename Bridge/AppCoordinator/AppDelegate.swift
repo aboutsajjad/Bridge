@@ -8,7 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
-
+import ChameleonFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.applicationCoordinator = applicationCoordinator
         
         applicationCoordinator.start()
+        UINavigationBar.appearance().barTintColor = UIColor.flatNavyBlue()
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UITabBar.appearance().tintColor = .black
+        UIApplication.shared.statusBarStyle = .lightContent
         
         return true
     }

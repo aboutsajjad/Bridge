@@ -12,7 +12,7 @@ import FileBrowser
 class BrowserCoordinator: Coordinator {
     //private let presenter: UITabBarController
     //private var navViewcontroler: BrowserViewController
-    let browserViewController: BrowserViewController
+    //let browserViewController: BrowserViewController
 
     var fileBrowser: FileBrowser?
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -23,7 +23,7 @@ class BrowserCoordinator: Coordinator {
     
     
     init() {
-        browserViewController = BrowserViewController(nibName: nil, bundle: nil)
+        //browserViewController = BrowserViewController(nibName: nil, bundle: nil)
         fileBrowser = FileBrowser(initialPath: paths[0], allowEditing: true, showCancelButton: false)
         
         //navViewcontroler.title = "Browser"

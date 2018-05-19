@@ -16,10 +16,33 @@ import RMessage
 
 class SearchViewController: UIViewController {
     var downloadManager: MZDownloadManager? = nil
-    @IBOutlet weak var searchbtn: UIButton!
-    @IBOutlet weak var linkfield: UITextField!
+    lazy var searchbtn: UIButton = {
+        let btn = UIButton(type: .custom)
+        btn.setTitle("Search", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.setTitleColor(.gray, for: .highlighted)
+        btn.addTarget(self, action: #selector(search), for: .touchUpInside)
+        return btn
+    }()
+    lazy var linkfield: UITextField = {
+        let field = UITextField()
+        field.placeholder = ""
+        field.borderStyle = .roundedRect
+        field.clearButtonMode = .whileEditing
+        field.placeholder = "e.g https://www.youtube.com/watch?v=7X9kpHB7Aow"
+        return field
+    }()
     
-    @IBAction func search(_ sender: Any) {
+    lazy var titlelabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = "The Intuitive Interface Lets You Extract Videos From Any Websites Effortlessly"
+        label.textAlignment = .center
+        label.font = label.font.withSize(17)
+        return label
+    }()
+    
+    @objc func search() {
         if let url = linkfield.text {
             if url != "" {
                 NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(type: .ballRotateChase))
@@ -41,6 +64,10 @@ class SearchViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        view.addSubview(titlelabel)
+        view.addSubview(searchbtn)
+        view.addSubview(linkfield)
+        view.backgroundColor = .white
     }
     
     
@@ -58,6 +85,11 @@ class SearchViewController: UIViewController {
             make.leftMargin.rightMargin.equalToSuperview()
         }
         
+        titlelabel.snp.remakeConstraints { (maker) in
+            maker.bottom.equalTo(linkfield.snp.top).offset(-50)
+            maker.left.equalToSuperview().offset(20)
+            maker.right.equalToSuperview().offset(-20)
+        }
     }
     
     func entriesActions(_ ‌entries: Entires) {
@@ -75,8 +107,10 @@ class SearchViewController: UIViewController {
     func formatsAction(_ entry: Entity){
         let allertController = UIAlertController(title: nil, message: entry.title, preferredStyle: .actionSheet)
         for fm in entry.formats {
-            let action = UIAlertAction(title: fm.format, style: .default, handler: { (action) in
-                self.downloadManager?.addDownloadTask("\(entry.title).\(fm.ext)", fileURL: fm.url)
+            let action = UIAlertAction(title: "\(fm.ext) - \(fm.format)", style: .default, handler: { (action) in
+                
+                self.downloadManager?.addDownloadTask("\(entry.title) - \(fm.format).\(fm.ext)", fileURL: fm.url)
+                
                 RMessage.showNotification(withTitle: "Download Started.", type: .success, customTypeName: nil, callback: nil)
                 
             })
@@ -96,7 +130,7 @@ class SearchViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
         
     }
-
+    
     
 }
 

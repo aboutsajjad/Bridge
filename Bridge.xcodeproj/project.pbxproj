@@ -10,18 +10,17 @@
 		294798DA0B53BCCF66CEE3AD /* Pods_BridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F023CEF57DA881442726F5 /* Pods_BridgeTests.framework */; };
 		C425DA732052975A00B6A707 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425DA722052975A00B6A707 /* URLSession.swift */; };
 		C425DA772052CCB700B6A707 /* BrowserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425DA762052CCB700B6A707 /* BrowserCoordinator.swift */; };
-		C425DA7E2052CD1600B6A707 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425DA7C2052CD1600B6A707 /* BrowserViewController.swift */; };
-		C425DA7F2052CD1600B6A707 /* BrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C425DA7D2052CD1600B6A707 /* BrowserViewController.xib */; };
 		C451F58920502ADB00CE71A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F58820502ADB00CE71A7 /* AppDelegate.swift */; };
 		C451F59020502ADB00CE71A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C451F58F20502ADB00CE71A7 /* Assets.xcassets */; };
 		C451F59320502ADB00CE71A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C451F59120502ADB00CE71A7 /* LaunchScreen.storyboard */; };
 		C451F59C20502B2100CE71A7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F59B20502B2100CE71A7 /* Coordinator.swift */; };
 		C451F59E20502B3B00CE71A7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F59D20502B3B00CE71A7 /* AppCoordinator.swift */; };
 		C451F5A720502C0700CE71A7 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5A620502C0700CE71A7 /* SearchCoordinator.swift */; };
-		C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5A820502CB800CE71A7 /* SearchViewController.swift */; };
-		C451F5AB20502CB800CE71A7 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C451F5A920502CB800CE71A7 /* SearchViewController.xib */; };
 		C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */; };
 		C45E5D1A20935CF8000DAE7B /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E5D1920935CF8000DAE7B /* Reach.swift */; };
+		C471613320A56C5B007E327C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471613220A56C5B007E327C /* SearchViewController.swift */; };
+		C471613520A56ECF007E327C /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471613420A56ECF007E327C /* DownloadViewController.swift */; };
+		C471613720A570F7007E327C /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471613620A570F7007E327C /* DownloadTableViewCell.swift */; };
 		C484F4E2205047B700033685 /* python36.zip in Resources */ = {isa = PBXBuildFile; fileRef = C484F410205047B700033685 /* python36.zip */; };
 		C484F4E4205047B800033685 /* libxz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F47D205047B700033685 /* libxz.a */; };
 		C484F4E5205047B800033685 /* libOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F490205047B700033685 /* libOpenSSL.a */; };
@@ -34,10 +33,6 @@
 		C484F4F820504CD200033685 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F4F720504CD200033685 /* libsqlite3.tbd */; };
 		C484F4FA20504CEA00033685 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C484F4F920504CEA00033685 /* libz.tbd */; };
 		C484F4FC20504D5E00033685 /* app.py in Resources */ = {isa = PBXBuildFile; fileRef = C484F4FB20504D5E00033685 /* app.py */; };
-		C484FC182051248300033685 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484FC162051248300033685 /* DownloadViewController.swift */; };
-		C484FC192051248300033685 /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C484FC172051248300033685 /* DownloadViewController.xib */; };
-		C484FC202051407800033685 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C484FC1E2051407800033685 /* DownloadCell.swift */; };
-		C484FC212051407800033685 /* DownloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C484FC1F2051407800033685 /* DownloadCell.xib */; };
 		C4F3348620524D17004903B8 /* roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3348520524D17004903B8 /* roundTo.swift */; };
 		C4F3349020525253004903B8 /* BridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F3348F20525253004903B8 /* BridgeTests.swift */; };
 		C4F33499205252EF004903B8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F33498205252EF004903B8 /* API.swift */; };
@@ -63,8 +58,6 @@
 		B9B56F729EFFD0D21A2A049E /* Pods-BridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BridgeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BridgeTests/Pods-BridgeTests.release.xcconfig"; sourceTree = "<group>"; };
 		C425DA722052975A00B6A707 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		C425DA762052CCB700B6A707 /* BrowserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserCoordinator.swift; sourceTree = "<group>"; };
-		C425DA7C2052CD1600B6A707 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
-		C425DA7D2052CD1600B6A707 /* BrowserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowserViewController.xib; sourceTree = "<group>"; };
 		C451F58520502ADB00CE71A7 /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C451F58820502ADB00CE71A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C451F58F20502ADB00CE71A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,10 +66,11 @@
 		C451F59B20502B2100CE71A7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C451F59D20502B3B00CE71A7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C451F5A620502C0700CE71A7 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
-		C451F5A820502CB800CE71A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		C451F5A920502CB800CE71A7 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCoordinator.swift; sourceTree = "<group>"; };
 		C45E5D1920935CF8000DAE7B /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		C471613220A56C5B007E327C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C471613420A56ECF007E327C /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		C471613620A570F7007E327C /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
 		C484F408205047B700033685 /* pyconfig-x86_64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-x86_64.h"; sourceTree = "<group>"; };
 		C484F409205047B700033685 /* pyconfig-armv7s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pyconfig-armv7s.h"; sourceTree = "<group>"; };
 		C484F40A205047B700033685 /* pyconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyconfig.h; sourceTree = "<group>"; };
@@ -294,10 +288,6 @@
 		C484F4F720504CD200033685 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C484F4F920504CEA00033685 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C484F4FB20504D5E00033685 /* app.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = app.py; sourceTree = "<group>"; };
-		C484FC162051248300033685 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
-		C484FC172051248300033685 /* DownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
-		C484FC1E2051407800033685 /* DownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
-		C484FC1F2051407800033685 /* DownloadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadCell.xib; sourceTree = "<group>"; };
 		C4ED7BB72094CE1B009AAF5B /* update.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = update.py; sourceTree = "<group>"; };
 		C4ED7BB82094CE1B009AAF5B /* options.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = options.py; sourceTree = "<group>"; };
 		C4ED7BB92094CE1B009AAF5B /* version.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = version.py; sourceTree = "<group>"; };
@@ -1307,8 +1297,7 @@
 			isa = PBXGroup;
 			children = (
 				C451F5A620502C0700CE71A7 /* SearchCoordinator.swift */,
-				C451F5A820502CB800CE71A7 /* SearchViewController.swift */,
-				C451F5A920502CB800CE71A7 /* SearchViewController.xib */,
+				C471613220A56C5B007E327C /* SearchViewController.swift */,
 			);
 			path = SearchCoordinator;
 			sourceTree = "<group>";
@@ -1317,10 +1306,8 @@
 			isa = PBXGroup;
 			children = (
 				C451F5B12050312900CE71A7 /* DownloadCoordinator.swift */,
-				C484FC162051248300033685 /* DownloadViewController.swift */,
-				C484FC172051248300033685 /* DownloadViewController.xib */,
-				C484FC1E2051407800033685 /* DownloadCell.swift */,
-				C484FC1F2051407800033685 /* DownloadCell.xib */,
+				C471613420A56ECF007E327C /* DownloadViewController.swift */,
+				C471613620A570F7007E327C /* DownloadTableViewCell.swift */,
 			);
 			path = DownloadCoordinator;
 			sourceTree = "<group>";
@@ -1329,8 +1316,6 @@
 			isa = PBXGroup;
 			children = (
 				C425DA762052CCB700B6A707 /* BrowserCoordinator.swift */,
-				C425DA7C2052CD1600B6A707 /* BrowserViewController.swift */,
-				C425DA7D2052CD1600B6A707 /* BrowserViewController.xib */,
 			);
 			path = BrowserCoordinator;
 			sourceTree = "<group>";
@@ -2827,14 +2812,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C425DA7F2052CD1600B6A707 /* BrowserViewController.xib in Resources */,
 				C484F4FC20504D5E00033685 /* app.py in Resources */,
 				C451F59320502ADB00CE71A7 /* LaunchScreen.storyboard in Resources */,
 				C484F4E2205047B700033685 /* python36.zip in Resources */,
 				C451F59020502ADB00CE71A7 /* Assets.xcassets in Resources */,
-				C484FC212051407800033685 /* DownloadCell.xib in Resources */,
-				C451F5AB20502CB800CE71A7 /* SearchViewController.xib in Resources */,
-				C484FC192051248300033685 /* DownloadViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2919,6 +2900,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Bridge/Pods-Bridge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/MBCircularProgressBar/MBCircularProgressBar.framework",
@@ -2933,6 +2915,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBCircularProgressBar.framework",
@@ -2988,20 +2971,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C484F4F620504A8C00033685 /* youtubedl.m in Sources */,
+				C471613720A570F7007E327C /* DownloadTableViewCell.swift in Sources */,
 				C451F5B22050312900CE71A7 /* DownloadCoordinator.swift in Sources */,
-				C484FC202051407800033685 /* DownloadCell.swift in Sources */,
 				C4F3348620524D17004903B8 /* roundTo.swift in Sources */,
-				C451F5AA20502CB800CE71A7 /* SearchViewController.swift in Sources */,
-				C484FC182051248300033685 /* DownloadViewController.swift in Sources */,
 				C45E5D1A20935CF8000DAE7B /* Reach.swift in Sources */,
 				C451F59E20502B3B00CE71A7 /* AppCoordinator.swift in Sources */,
 				C425DA732052975A00B6A707 /* URLSession.swift in Sources */,
-				C425DA7E2052CD1600B6A707 /* BrowserViewController.swift in Sources */,
 				C451F58920502ADB00CE71A7 /* AppDelegate.swift in Sources */,
+				C471613320A56C5B007E327C /* SearchViewController.swift in Sources */,
 				C425DA772052CCB700B6A707 /* BrowserCoordinator.swift in Sources */,
 				C451F5A720502C0700CE71A7 /* SearchCoordinator.swift in Sources */,
 				C4F3349C20527CDA004903B8 /* Entity.swift in Sources */,
 				C4F33499205252EF004903B8 /* API.swift in Sources */,
+				C471613520A56ECF007E327C /* DownloadViewController.swift in Sources */,
 				C451F59C20502B2100CE71A7 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
