@@ -1,5 +1,5 @@
 ![Platform iOS 10+](https://img.shields.io/badge/Platform-iOS%2010%2B-blue.svg)
-[![Language Swift 3](https://img.shields.io/badge/Language-Swift%203-orange.svg)](https://developer.apple.com/swift)
+[![Language Swift 4.1](https://img.shields.io/badge/Language-Swift%203-orange.svg)](https://developer.apple.com/swift)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aboutsajjad/Bridge/blob/master/LICENSE)
 
 # Bridge
