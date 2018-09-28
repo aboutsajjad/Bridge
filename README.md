@@ -9,7 +9,7 @@ The easiest way to download videos from Youtube, Tumblr, Vine, Facebook, Instagr
 Please Feel Free To Contribute! 
 
 > **Have an issue**  
-Head over to https://github.com/aboutsajjad/Bridge/issues and report this to us and get help.
+Head over to https://github.com/aboutsajjad/Bridge/issues and report this to us and get help. (Currently Not Supported)
 
 ## Getting started
 
